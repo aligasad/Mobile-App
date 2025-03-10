@@ -1,5 +1,3 @@
-
-
 const mobileAPI_URL = "https://openapi.programming-hero.com/api/phones?search=";
 const mobileContainer = document.querySelector("#mobileContainer");
 
