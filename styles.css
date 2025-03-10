@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
   
 }
+
+
 #wrapper{
   background-color: #2F4F4F;
   display: flex;
@@ -12,9 +16,58 @@
   align-items: center;
   row-gap: 30px;
   padding-top: 20px;
+
+  h1{
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #def8f8;
+  }
 }
-input, button{
-  height: 35px;
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #183535;
+  padding: 30px 80px;
+  h2{
+    color: #8fc2c2;
+  }
+}
+.page1{
+  display: grid;
+  row-gap: 20px;
+  place-items: center;
+  background-color: #183535;
+
+  h1{
+    font-size: 3.8rem;
+    font-weight: 700;
+    color: #8fc2c2;
+  }
+  p{
+    width: 60%;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: #8fc2c2;
+  }
+  button{
+    margin-bottom: 30px;
+  }
+}
+
+form{
+  margin-top: 20px;
+}
+
+input{
+  height: 52px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0px 10px;
+  width: 300px;
+  margin-right: 10px;
+  box-shadow: inset 0px 0px 5px #000;
 }
 #mobileContainer{
   display: flex;
@@ -22,44 +75,169 @@ input, button{
   align-items: center;
   flex-wrap: wrap;
   gap: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  min-height: 100dvh;
 }
+
+
+#loadingDiv{
+  position: absolute;
+  top: 50px;
+  height: 100px;
+  width:  100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 10px;
+}
+#loading{
+  height: 40px;
+  width:  40px;
+  border: 5px solid #312d2d;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  to{
+    transform: rotate(360deg);
+  }
+}
+
 .card{
   display: flex;
   flex-direction: column;
   row-gap: 10px;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 400px;
+  width: 350px;
+  height: 480px;
   border-radius: 20px;
   background-color: #2F4F4F;
   box-shadow: inset 0px 0px 5px #000, inset -2px -2px 5px #000;
+
+  
+  img{
+    border-radius: 15px;
+    border: 5px solid #F0E68C;
+    height: 240px;
+  }
   h3{
-    margin-top: 15px;
-    color: wheat;
+    margin-top: 10px;
+    color: #F0E68C;
   }
   p{
     text-align: center;
     color: white;
+    width: 80%;
+    font-size: 0.9rem;
+    margin-top: -10px;
   }
-  button{
-    padding: 15px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #015db9;
-    color: #000;
-    font-weight: bolder;
-    box-shadow: 2px 2px 5px 2px #000;
-    margin-top: 10px;
-    cursor: pointer;
-  }
+  
   button:hover{
-    box-shadow: inset 0px 0px 5px #000;
-    background-color: #2F4F4F;
-    color: white;
+    box-shadow: inset 2px 2px 5px #000, inset -2px -2px 5px #000;
+    background-color: #F0E68C;
+    color: F0E68C;
   }
 }
 
-.img{
-  height: 200px;
+
+.detalsDiv{
+  display: none;
+  position: fixed;
+  height: 500px;
+  width:  450px;
+  padding: 30px 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:#008f8f;
+  overflow-y: scroll;
+  place-items: center;
+  row-gap: 5px;
+  border-radius: 20px;
+  border: 3px solid #000;
+
+  #brand{
+    font-weight: bold;
+  }
+  h3{
+    color: white;
+    margin-top: 20px;
+  }
+}
+
+.detailedDes{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.close{
+  padding: 13px 20px;
+  border-radius: 5px;
+  background-color: red;
+  box-shadow: inset 0px 0px 5px #000;
+  border: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.close:hover{
+  background-color: #F0E68C;
+  color: #000;
+}
+
+
+
+.button {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #015db9;
+  color: white;
+  font-weight: bolder;
+  box-shadow: 2px 2px 5px 2px #000;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: #112086;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-color: #183535;
+  h1{
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  p{
+    font-size: 1.1rem;
+  }
+
+  .icons{
+    margin-top: 20px;
+    display: flex;
+    column-gap: 20px;
+    a{
+      font-size: 2.2rem;
+      color: #000;
+    }
+    a:hover{
+      color: white;
+    }
+  }
+  
 }
