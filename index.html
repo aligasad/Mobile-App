@@ -1,22 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobile Store App</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div id="wrapper">
-    <h1>Search Your Phone</h1>
-    <div id="main">
-      <form onsubmit="searchMobiles(event)" action="">
-        <input type="text" name="query" placeholder="e.g. oppo, apple, iphone" required>
-        <button type="submit">Search</button>
-      </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Store App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h2>Hot Gadgets</h2>
+      <button class="button">SIGN UP</button>
+    </header>
+    <div class="page1">
+      <h1>Apple Iphone 13 Pro Max</h1>
+      <p>
+        There are many variations of passages of Lorem Ipsum available, but the
+        majority have suffered alteration in some form, by injected humou.
+      </p>
+      <button class="button">BUY NOW</button>
+      <div>
+        <img
+          src="https://tasmim-tahsin.github.io/PhoneHuntingAPI/images/pngwing%202.png"
+          alt=""
+        />
+        <img
+          src="https://tasmim-tahsin.github.io/PhoneHuntingAPI/images/pngwing%201.png"
+          alt=""
+        />
+        <img
+          src="https://tasmim-tahsin.github.io/PhoneHuntingAPI/images/pngwing%202.png"
+          alt=""
+        />
+      </div>
     </div>
-    <div id="mobileContainer"></div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <div id="wrapper">
+      <h1>Search Your Phone</h1>
+      <div id="main">
+        <form onsubmit="searchMobiles(event)" action="">
+          <input
+            type="text"
+            name="query"
+            placeholder="e.g. oppo, apple, iphone"
+            required
+          />
+          <button class="button" type="submit">Search</button>
+        </form>
+      </div>
+      <div id="mobileContainer">
+        <div id="loadingDiv">
+          <h4>Loading...</h4>
+          <div id="loading"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="detalsDiv">
+      <img id="detailImg" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg" />
+      <h3 id="detailTitle">iPhone 13 mini</h3>
+      <p id="brand">Brand: <span id="detailBrand"></span></p>
+      <p class="detailedDes">
+        <span
+          >storage: 128GB/256GB storage, no card slot displaySize: 6.55 inches,
+          103.6 cm2 (~89.0% screen-to-body ratio)</span
+        ><span
+          >chipSet: Qualcomm SM8350 Snapdragon 888 5G (5 nm) memory: 128GB 8GB
+          RAM, 256GB 8GB RAM, 256GB 12GB RAM</span
+        ><span
+          >sensors: Fingerprint (under display,optical), accelerometer, gyro,
+          proximity, compass, color spectrum</span
+        ><span>Exp. release 2022, March 14</span>
+      </p>
+      <button class="close" onclick="toggleDetail()">CLOSE</button>
+    </div>
+    
+    <footer>
+      <h1>&#9886;<span>A</span>&#9887;</h1>
+      <p><b>Hot Gadgets BD</b></p>
+      <p><b>Providing reliable tech items since 1992</b></p>
+      <p>Copyright &copy; 2023 - All right reserved</p>
+      <div class="icons">
+        <a href="https://github.com/aligasad"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/asadalamalig/"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="https://www.hackerrank.com/profile/asadalam4291"
+          ><i class="fa-brands fa-hackerrank"></i
+        ></a>
+      </div>
+    </footer>
+    
+    <script src="script.js"></script>
+  </body>
 </html>
